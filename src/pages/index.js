@@ -9,8 +9,13 @@ export default function Home({products}) {
     <div className="bg-gray-100 ">
       <Head>
         <title>Amazon 2.0</title>
+      
       </Head>
-     <Header/>
+      <div className=" sticky top-0 z-50">
+      <Header/>
+
+      </div>
+
      <main className="max-w-screen-2xl mx-auto ">
       <Banner/>
       <ProductFeed products ={products}/>

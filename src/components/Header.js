@@ -16,15 +16,15 @@ export default function Header() {
     return (
         <header className=' '>
         {/* TOP NAV */}
-         <div className="flex absolute  sticky top-0 items-center bg-white drop-shadow-lg p-1 flex-grow py-2  justify-center z-50">
-         <div className="mt-2  sticky top-0 flex items-center flex-grow sm:flex-grow-0">
+         <div className="flex sticky bottom-0 shadow-lg items-center bg-black  p-1 flex-grow py-2  justify-center z-50">
+         <div className="mt-auto  flex items-center flex-grow sm:flex-grow-0 justify-center">
              <Image
              onClick={() =>router.push('/')}
-             src="http://wordpress.aromainsider.work/wp-content/uploads/2021/03/cropped-aroma-insider-logo-instagram.jpg"
+             src="http://wordpress.aromainsider.work/wp-content/uploads/2021/05/Asset-3.png"
              width={290}
              height={60}
              objectFit="contain"
-             className="cursor-pointer "
+             className="cursor-pointer pb-1 mb-1 "
 
              />
          </div>
@@ -37,7 +37,7 @@ export default function Header() {
          />
 
          </div>
-         <div className='text-black flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
+         <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
              {/**Right */}
              <div onClick={!session ? signIn : signOut}  className=' link'>
                  <p className='hover: underline'>{session ? `Hello, ${session.user.name}` : "SignIn"}</p>

@@ -7,7 +7,7 @@ import CheckOutProduct from '../components/CheckOutProduct'
 import Currency from 'react-currency-formatter';
 import {signIn,signOut,useSession} from 'next-auth/client'
 import {loadStripe  } from "@stripe/stripe-js";
-const stripePromise= loadStripe(process.env.STRIPE_PUBLIC_KEY)
+const stripePromise= loadStripe("pk_test_51IwGD6FWb6mUX8aC9hBYOjylwiyVG9Ihrfa9ysprMDbla3hpeOXgGMkqmuj80FHQYwxX2gCYS3f85sghpWLZjlQE00LNhiESpj")
 import axios from 'axios'
 
 
@@ -50,7 +50,10 @@ export default function Checkout() {
 
     return (
         <div className='bg-gray-100'>
+              <div className=" sticky top-0 z-50">
+
         <Header/>
+        </div>
         <main className='lg:flex max-w-screen-2xl max-auto'>
             {/**left */}
 
