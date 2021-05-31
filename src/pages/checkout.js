@@ -24,14 +24,7 @@ export default function Checkout() {
        })
 
        // redirect user to Stripe Checkout
-       const results= await stripe.redirectToCheckout({
-           sessionId:checkoutSession.data.id
-       })
-
-       if (results.error){
-           alert(results.error.message)
-       }
-
+       
        console.log(items)
 
 

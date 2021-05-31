@@ -22,7 +22,10 @@ export default async (req,res) => {
         
 
     )
-    const session= await stripe.checkout.sessions.create({
+    res.status(200).json({
+        itranformDTA:transformedItem
+    })
+    {/**const session= await stripe.checkout.sessions.create({
         payment_method_types:['card'],
         shipping_rates:['shr_1IwRprFWb6mUX8aCJZlKjK5o'],
         shipping_address_collection:{
@@ -41,5 +44,5 @@ export default async (req,res) => {
 
 res.status(200).json({
     id:session.id
-})
+})*/}
 }
